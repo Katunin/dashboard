@@ -1,0 +1,108 @@
+// Component
+
+// title
+%title {
+  font-size: $titleFontSize;
+  color: $titleColor;
+  font-weight: $fontBold;
+}
+
+.section-title {
+  @extend %title;
+}
+.page-title {
+  @extend %title;
+  text-transform: uppercase;
+}
+
+//links
+
+.link {
+  font-size: $linkFontSizeDefault;
+  color: $linkColor;
+
+  &.large-link {
+    font-size: $linkLargeFont;
+  }
+
+  &:hover {
+    color: $linkHoverColor;
+  }
+}
+
+// buttons
+
+.btn {
+  padding: 12px 22px;
+  font-size: $btnFontSize;
+  color: $btnDefaultColor;
+  border-radius: 2px;
+  display: inline-block;
+
+  &.btn-default {
+    background-color: $btnDefaultBg;
+
+    &:hover {
+      background-color: $btnDefaultBgHover;
+    }
+  }
+
+  &.btn-action {
+    background-color: $btnActiontBg;
+    &:hover {
+      background-color: $btnActionBgHover;
+    }
+  }
+
+  &.btn-disabled {
+    background-color: $btnDisabletBg;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $btnDisableBgHover;
+    }
+  }
+}
+
+// table
+.table {
+  border-collapse: collapse;
+  font-size: $tableFontSize;
+  tbody {
+    tr {
+      &:hover {
+        background-color: $tableTrHover;
+      }
+    }
+  }
+  tr {
+
+    th {
+      padding: 30px 18px;
+      color: $grey;
+    }
+
+    td {
+      padding: 18px;
+      border-top: 1px solid $lightGrey;
+      font-size: $tableFontSize;
+
+      &.td-title {
+        font-size: 16px;
+        color: $grey;
+      }
+    }
+  }
+  .table-sort {
+    color: $grey;
+    padding: 8px 10px;
+    margin: -8px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+      color: $black;
+      background-color: $xsLightGrey;
+    }
+  }
+}
